@@ -2,7 +2,7 @@
  group project in cs 1010
 Group Members:
 Annese Everage
-Sophia
+Sophia Liwag
 Maria Vicente
 
 Plan: Menu based GUI using tkinter in python
