@@ -2,6 +2,7 @@ from tkinter import *
 
 menu = Tk()
 menu.title("Fun Times Restaurant")
+menu.geometry("1920x1080")
 def doDole():
     DWS.pack()
     DWSmall.pack(anchor = W, side= LEFT)
@@ -37,7 +38,7 @@ def placeOrder():
     spamnt = int(SPAmnt.get())
     receipt= ""
     total = 0
-    if dwamnt > 1:
+    if dwamnt >= 1:
         if DWSize.get() == "S":
             dwprice = 3.25
         elif DWSize.get() == "M":
@@ -46,27 +47,27 @@ def placeOrder():
             dwprice = 5.25
         dwtotal = round(dwprice * dwamnt, 2)
         dwrcpt = str(dwamnt) + "x" + DWSize.get()+ " Dole Whip(s):   $" + str(dwtotal)
-        receipt += dwrcpt + "\n"
+        receipt += (dwrcpt + "\n")
         total += dwtotal
-    if camnt > 1:    
+    if camnt >= 1:    
         cprice = 3.25
         ctotal = round(cprice * camnt, 2)
         crcpt = str(camnt) + "x" + " Churro(s):   $" + str(ctotal)
-        receipt += crcpt + "\n"
+        receipt += (crcpt + "\n")
         total += ctotal
-    if ccamnt > 1:
+    if ccamnt >= 1:
         ccprice = 2.75
         cctotal = round(ccprice * camnt, 2)
         ccrcpt = str(ccamnt) + "x" + "Cotton Candy:   $" + str(cctotal)
-        receipt += ccrcpt + "\n"
+        receipt += (ccrcpt + "\n")
         total += cctotal
-    if hamnt > 1: 
+    if hamnt >= 1: 
         hprice = 9.25
         htotal = round(hprice * hamnt, 2)
         hrcpt = str(hamnt) + "x" + "Hamburger(s):   $" + str(htotal)
         receipt += hrcpt + "\n"
         total += htotal
-    if pamnt > 1:
+    if pamnt >= 1:
         if PSize.get() == "S":
             pprice = 2.75
         elif PSize.get() == "M":
@@ -75,13 +76,13 @@ def placeOrder():
             pprice = 4.75
         ptotal = round(pprice * pamnt, 2)
         prcpt = str(pamnt) + "x" + PSize.get()+ " Popcorn(s):   $" + str(ptotal)
-        receipt += prcpt + "\n"
+        receipt += (prcpt + "\n")
         total += ptotal
-    if spamnt > 1: 
+    if spamnt >= 1: 
         spprice = 3.25
         sptotal = round(spprice * spamnt, 2)
         sprcpt = str(spamnt) + "x" + "Soft Pretzel(s):   $" + str(sptotal)
-        receipt += sprcpt + "\n" 
+        receipt += (sprcpt + "\n") 
         total += sptotal
 
     receipt += "Total:       $" + str(total)
